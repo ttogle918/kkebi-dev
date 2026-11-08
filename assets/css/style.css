@@ -52,7 +52,7 @@ header.top .bar {
   display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px;
   color: var(--text-1); text-decoration: none;
 }
-.logo svg { flex-shrink: 0; }
+.logo img { flex-shrink: 0; display: block; }
 nav.links { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; }
 nav.links a { color: var(--text-2); text-decoration: none; padding: 12px 2px; }
 nav.links a:hover, nav.links a[aria-current="page"] { color: var(--text-1); }
