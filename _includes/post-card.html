@@ -1,0 +1,10 @@
+<article class="card">
+  <h2 class="card-title"><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h2>
+  <p class="meta"><time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%Y.%m.%d" }}</time></p>
+  <p class="card-sum">{% if include.post.description %}{{ include.post.description }}{% else %}{{ include.post.excerpt | strip_html | truncate: 120 }}{% endif %}</p>
+  {% if include.post.tags.size > 0 %}
+  <ul class="tags" aria-label="태그">
+    {% for tag in include.post.tags %}<li><a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a></li>{% endfor %}
+  </ul>
+  {% endif %}
+</article>

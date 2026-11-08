@@ -1,0 +1,14 @@
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="{{ '/' | relative_url }}" aria-label="kkebi.dev 홈">
+      <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="8" fill="#c2410c"/><path d="M16 6l8 3v7c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V9z" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      <span>kkebi.dev</span>
+    </a>
+    <nav class="links" aria-label="주 메뉴">
+      <a href="{{ '/' | relative_url }}#posts"{% if page.url == '/' %} aria-current="page"{% endif %}>글</a>
+      <a href="{{ '/tags/' | relative_url }}"{% if page.url == '/tags/' %} aria-current="page"{% endif %}>태그</a>
+      <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>소개</a>
+      <a class="product" href="{{ site.product_url }}" rel="noopener">제품 (kkebi.app)</a>
+    </nav>
+  </div>
+</header>

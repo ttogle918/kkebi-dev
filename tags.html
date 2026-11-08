@@ -1,0 +1,24 @@
+---
+layout: default
+title: 태그
+permalink: /tags/
+---
+<h1>태그</h1>
+{% assign tag_names = site.tags | sort %}
+{% if tag_names.size > 0 %}
+<ul class="tags tag-index" aria-label="태그 목록">
+  {% for t in tag_names %}<li><a href="#{{ t[0] | slugify }}">{{ t[0] }} <span class="count">{{ t[1].size }}</span></a></li>{% endfor %}
+</ul>
+{% for t in tag_names %}
+<section class="tag-sec" id="{{ t[0] | slugify }}">
+  <h2 class="sec-title">{{ t[0] }}</h2>
+  <ul class="plain-list">
+    {% for post in t[1] %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <time class="small" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+{% else %}
+<p class="empty">아직 태그가 없어요.</p>
+{% endif %}

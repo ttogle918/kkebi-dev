@@ -1,0 +1,21 @@
+---
+layout: default
+title: 글
+---
+<section class="intro">
+  <h1>kkebi.dev</h1>
+  <p class="lead">kkebi 를 만들며 배운 것과 측정한 숫자를 기록해요.</p>
+</section>
+
+<section id="posts" aria-labelledby="posts-h">
+  <h2 id="posts-h" class="sec-title">글</h2>
+  {% if site.posts.size > 0 %}
+  <div class="cards">
+    {% for post in site.posts %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">곧 첫 글이 올라와요.</p>
+  {% endif %}
+</section>

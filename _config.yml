@@ -1,0 +1,26 @@
+title: kkebi.dev
+description: kkebi 를 만들며 배운 것과 측정한 숫자를 기록하는 블로그
+url: "https://kkebi.dev"
+baseurl: ""
+lang: ko
+permalink: /posts/:title/
+markdown: kramdown
+highlighter: rouge
+
+# GitHub Pages 기본 허용 플러그인만 사용
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+product_url: "https://kkebi.app"
+
+exclude:
+  - preview
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
